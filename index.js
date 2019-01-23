@@ -40,10 +40,9 @@ function indexAt(node, collection, linkedList) {
     return index;
   } else {
     let nextNode = next(node, collection);
-    do {
+    while (node !== nextNode) {
        index++;
     }
-    while (node !== head);
   }
 
   return index;
