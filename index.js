@@ -52,7 +52,7 @@ function insertNodeAt(index, address, linkedList, collection) {
   let head = headNode(linkedList, collection);
   let previousNode = nodeAt(index - 1, linkedList, collection);
   let newNode = collection[address];
-  
+
   newNode.next = previousNode.next;
   previousNode.next = address;
   return nodeAt(index, linkedList, collection);
