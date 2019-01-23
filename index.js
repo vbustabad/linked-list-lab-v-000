@@ -18,11 +18,6 @@ function nodeAt(index, linkedList, collection) {
 
   for (let i = 0; i < index; i++) {
      node = next(node, collection);
-
-  let node = collection[linkedList];
-
-  for (let i = 0; i < index; i++) {
-     node = next(headNode(linkedList, collection), collection);
    }
 
   return node;
@@ -34,16 +29,5 @@ function addressAt(index, linkedList, collection) {
   } else {
     let previousNode = nodeAt(index - 1, linkedList, collection);
     return previousNode.next;
-
-  let head = collection[linkedList];
-  let node;
-  let i;
-
-  for (i = 0; i < index; i++) {
-     node = next(head, collection);
-   }
-
-  if (collection[linkedList] === node) {
-    return linkedList;
   }
 }
