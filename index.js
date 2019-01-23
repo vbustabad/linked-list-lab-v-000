@@ -34,12 +34,12 @@ function addressAt(index, linkedList, collection) {
 
 function indexAt(node, collection, linkedList) {
   let head = headNode(linkedList, collection);
-  let index = 0; 
+  let index = 0;
 
   if (node === head) {
     return index;
   } else {
-    let nextNode = next(node, collection); 
+    let nextNode = next(node, collection);
     while (node !== nextNode) {
        index++;
     }
