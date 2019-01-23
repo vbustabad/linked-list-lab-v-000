@@ -50,10 +50,10 @@ function indexAt(node, collection, linkedList) {
 
 function insertNodeAt(index, address, linkedList, collection) {
   let head = headNode(linkedList, collection);
-  let node = nodeAt(index, linkedList, collection);
   let previousNode = nodeAt(index - 1, linkedList, collection);
-
+  let newNode = collection[address];
+  
+  newNode.next = previousNode.next;
   previousNode.next = address;
-  node.next = addressAt(index + 1, linkedList, collection);
-  return collection;
+  return nodeAt(index, linkedList, collection);
 }
