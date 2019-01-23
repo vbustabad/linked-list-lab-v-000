@@ -17,8 +17,8 @@ function nodeAt(index, linkedList, collection) {
   //let head = node;
 
   for (let i = 0; i < index; i++) {
-     node = next(node, collection);
-   }
+    node = next(node, collection);
+  }
 
   return node;
 }
@@ -33,5 +33,16 @@ function addressAt(index, linkedList, collection) {
 }
 
 function indexAt(node, collection, linkedList) {
-  return collection.indexOf(node);
+  let head = headNode(linkedList, collection);
+  let index = 0; 
+
+  if (node === head) {
+    return index;
+  } else {
+    let nextNode = next(node, collection); 
+    while (node !== nextNode) {
+       index++;
+    }
+    return index;
+  }
 }
