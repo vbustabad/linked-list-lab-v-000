@@ -57,3 +57,12 @@ function insertNodeAt(index, address, linkedList, collection) {
   previousNode.next = address;
   return nodeAt(index, linkedList, collection);
 }
+
+function deleteNodeAt(index, linkedList, collection) {
+  let head = headNode(linkedList, collection);
+  let node = nodeAt(index, linkedList, collection);
+  let previousNode = nodeAt(index - 1, linkedList, collection);
+
+  previousNode.next = addressAt(index + 1, linkedList, collection);
+  return nodeAt(index, linkedList, collection);
+}
