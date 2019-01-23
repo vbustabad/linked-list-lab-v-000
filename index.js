@@ -45,6 +45,6 @@ function indexAt(node, collection, linkedList) {
     {
     while (node !== nextNode);
   }
-    return index;
-  }
+
+  return index;
 }
