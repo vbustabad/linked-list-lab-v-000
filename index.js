@@ -33,11 +33,5 @@ function addressAt(index, linkedList, collection) {
 }
 
 function indexAt(node, collection, linkedList) {
-  let head = headNode(linkedList, collection);
-
-  if (head) {
-    return 0;
-  } else {
-    return collection.indexOf(node);
-  }
+  return collection.indexOf(node);
 }
