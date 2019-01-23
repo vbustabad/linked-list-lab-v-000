@@ -48,5 +48,12 @@ function indexAt(node, collection, linkedList) {
   }
 }
 
-function insertNodeAt() {
+function insertNodeAt(index, address, linkedList, collection) {
+  let head = headNode(linkedList, collection);
+  let node = nodeAt(index, linkedList, collection);
+  let previousNode = nodeAt(index - 1, linkedList, collection);
+
+  previousNode.next = address;
+  node.next = addressAt(index + 1, linkedList, collection);
+  return collection;
 }
